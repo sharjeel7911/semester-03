@@ -1,0 +1,22 @@
+#include "class.h"
+
+EmployeeX::EmployeeX(const char* name, int id, double salary)
+    : m_id(id), m_salary(salary) {
+    if (name) {
+        m_name = new char[strlen(name) + 1];
+        strcpy(m_name, name);
+    } else m_name = nullptr;
+
+}
+
+EmployeeX::~EmployeeX() {
+    delete[] m_name;
+}
+
+/*____________________________________________________________________________________________________________________________*/
+
+ManagerX::ManagerX(int teamSize, double budget, const char* name, int id, double salary) : EmployeeX(name, id, salary), m_teamSize(teamSize), m_budget(budget) {}
+
+void ManagerX::display() {
+    cout << "Name: " << m_name << "\n" << "ID: " << m_id << "\n" << "Salary: " << m_salary << "\n" << "Team Size: " << m_teamSize << "\n" << "Budget: " << m_budget << endl;
+}
