@@ -1,4 +1,4 @@
-#include "Fraction.h"
+#include "fraction.h"
 
 int main() {
 	Fraction f1; //default constructor
