@@ -15,6 +15,7 @@
 !**/*.zip
 !**/*.md
 !**/*.gitignore
+!**/*.xlsx
 
 # Ignore compiled binaries
 *.out
